@@ -36,7 +36,13 @@ body{background:var(--cream);color:var(--ink);font-family:'Iowan Old Style',Char
 h1{text-align:center;font-size:clamp(38px,8vw,64px);line-height:1.02;letter-spacing:-1px;margin:8px 0 4px}
 h1 .q{color:var(--spot)}
 .sub{text-align:center;font-size:19px;max-width:34em;margin:10px auto 6px}
-.author{text-align:center;font-weight:700;letter-spacing:2px;font-size:15px;margin:14px 0 30px}
+.author{text-align:center;font-weight:700;letter-spacing:2px;font-size:15px;margin:14px 0 10px}
+.what{text-align:center;color:var(--soft);font-size:15.5px;max-width:36em;margin:0 auto 28px}
+.flow{margin:24px auto 6px;max-width:34em;text-align:center}
+.flow-step{border:1.5px solid var(--ink);padding:10px 16px;font-size:16px}
+.flow-arrow{color:var(--spot);font-size:20px;line-height:1;margin:6px 0}
+.origin-close{text-align:center;font-style:italic;color:var(--soft);font-size:16px;margin:16px 0 0}
+footer .nav{margin-bottom:10px}
 .cover{display:block;width:min(320px,70vw);margin:0 auto 34px;box-shadow:0 12px 40px rgba(22,19,14,.25)}
 .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:26px 0 8px}
 .btn{display:inline-block;padding:13px 26px;border:2px solid var(--spot);color:var(--spot);text-decoration:none;font-weight:700;font-size:17px}
@@ -62,6 +68,7 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <h1>ПОРІВНЯНО<br><span class="q">З ЧИМ?</span></h1>
 <div class="sub">Справжні небезпеки крипти — і ті, що старші, вже у вашому банку.</div>
 <div class="author">Дмитро Чистяков</div>
+<div class="what">Книжка-дослідження про повторювані фінансові схеми — побудована на роках задокументованих інцидентів і публічно перевірюваних доказах.</div>
 <img class="cover" src="assets/cover-uk.png" alt="ПОРІВНЯНО З ЧИМ?">
 <div class="btns"><a class="btn primary" href="#buy">Купити книжку</a>
 <a class="btn" href="assets/sample-uk.pdf">Читати безкоштовний фрагмент (PDF)</a></div>
@@ -71,6 +78,17 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <p class="body">У серпні 2024-го людина у Вашингтоні втратила $243 мільйони через телефонний дзвінок. Жодного рядка коду не зламали. Жоден гаманець не відмовив. Усе спрацювало рівно так, як спроєктовано, — і саме до цієї проблеми книжка ставиться серйозно.</p>
 <p class="body">Побудована на публічному каталозі з 650+ задокументованих інцидентів, книжка бере справжні небезпеки крипти по одній і ставить кожну поруч із її двійником, що вже працює у звичайних фінансах. Кожен розділ закінчується чесним вердиктом, що гірше, — і вердикти не всі в один бік.</p>
 <blockquote>Крипта не винайшла ці злочини. Вона їх записала.</blockquote><blockquote>Це не ринок із шахрайством. Це шахрайство з ринком.</blockquote><blockquote>Непрозорість не зменшує заморожування. Вона забирає пояснення.</blockquote>
+<div class="rule"></div>
+<h2>Звідки взялася ця книжка</h2>
+<p class="body">Ця книжка не була запланована. Роками її автор документував криптоінциденти в публічному дослідницькому каталозі — класифікуючи кожну велику крадіжку, шахрайство і крах із 2010 року, з джерелом біля кожного твердження. Десь після шестисотого інциденту закономірність стало неможливо ігнорувати: більшість цих злочинів не були новими. Технологія змінилася. Фінансові механізми — ні.</p>
+<div class="flow">
+<div class="flow-step"><strong><a class="plain" href="https://onchainattack.org">OnChainAttack</a></strong> — 650+ задокументованих інцидентів, 2010–2026</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step"><strong>Закономірність</strong> — ті самі схеми, перенесені на нові рейки</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step"><strong>Порівняно з чим?</strong> — книжка, кожне твердження <a class="plain" href="verify.html">можна перевірити</a></div>
+</div>
+<p class="origin-close">Спочатку було дослідження. Книжка — один із його результатів.</p>
 <div class="rule"></div>
 <h2>Дві історії з книжки</h2>
 <div class="vids">
@@ -92,5 +110,5 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <h2>Про автора</h2>
 <p class="body">Дмитро Чистяков — автор OAK, публічного каталогу 650+ задокументованих криптоінцидентів. Працював у банківській сфері, кібербезпеці та AI — і написав книжку, якої йому самому бракувало біля дверей.</p>
 <p class="center"><a class="plain" href="https://onchainattack.org">Безкоштовний каталог інцидентів (OAK) на GitHub</a></p>
-<footer>© Дмитро Чистяков, 2026 · Усі права застережено</footer>
+<footer><div class="nav"><a class="plain" href="methodology.html">Methodology</a> · <a class="plain" href="standard.html">The standard</a> · <a class="plain" href="about.html">About the author</a> · <a class="plain" href="verify.html">Verify</a></div>© Дмитро Чистяков, 2026 · Усі права застережено</footer>
 </div></body></html>

@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://comparedtowhatbook.com/</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/ru.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/uk.html"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://comparedtowhatbook.com/ru.html</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/ru.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/uk.html"/>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://comparedtowhatbook.com/uk.html</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-07-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/ru.html"/>
     <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/uk.html"/>
@@ -27,6 +27,18 @@
   </url>
   <url>
     <loc>https://comparedtowhatbook.com/verify.html</loc>
-    <lastmod>2026-07-18</lastmod>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/methodology.html</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/standard.html</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/about.html</loc>
+    <lastmod>2026-07-19</lastmod>
   </url>
 </urlset>

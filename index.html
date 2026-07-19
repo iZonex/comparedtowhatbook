@@ -36,7 +36,13 @@ body{background:var(--cream);color:var(--ink);font-family:'Iowan Old Style',Char
 h1{text-align:center;font-size:clamp(38px,8vw,64px);line-height:1.02;letter-spacing:-1px;margin:8px 0 4px}
 h1 .q{color:var(--spot)}
 .sub{text-align:center;font-size:19px;max-width:34em;margin:10px auto 6px}
-.author{text-align:center;font-weight:700;letter-spacing:2px;font-size:15px;margin:14px 0 30px}
+.author{text-align:center;font-weight:700;letter-spacing:2px;font-size:15px;margin:14px 0 10px}
+.what{text-align:center;color:var(--soft);font-size:15.5px;max-width:36em;margin:0 auto 28px}
+.flow{margin:24px auto 6px;max-width:34em;text-align:center}
+.flow-step{border:1.5px solid var(--ink);padding:10px 16px;font-size:16px}
+.flow-arrow{color:var(--spot);font-size:20px;line-height:1;margin:6px 0}
+.origin-close{text-align:center;font-style:italic;color:var(--soft);font-size:16px;margin:16px 0 0}
+footer .nav{margin-bottom:10px}
 .cover{display:block;width:min(320px,70vw);margin:0 auto 34px;box-shadow:0 12px 40px rgba(22,19,14,.25)}
 .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:26px 0 8px}
 .btn{display:inline-block;padding:13px 26px;border:2px solid var(--spot);color:var(--spot);text-decoration:none;font-weight:700;font-size:17px}
@@ -62,6 +68,7 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <h1>COMPARED<br><span class="q">TO WHAT?</span></h1>
 <div class="sub">The real dangers of crypto — and the older ones already in your bank.</div>
 <div class="author">Dmytro Chystiakov</div>
+<div class="what">A research-driven book about recurring financial patterns — built on years of documented incidents and publicly verifiable evidence.</div>
 <img class="cover" src="assets/cover-en.png" alt="COMPARED TO WHAT?">
 <div class="btns"><a class="btn primary" href="#buy">Buy the book</a>
 <a class="btn" href="assets/sample-en.pdf">Read the free sample (PDF)</a></div>
@@ -71,6 +78,17 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <p class="body">In August 2024, a man in Washington lost $243 million to a phone call. No code was broken. No wallet failed. Everything worked exactly as designed — and that is the problem this book takes seriously.</p>
 <p class="body">Built on a public catalogue of 650+ documented incidents, the book takes crypto's real dangers one at a time and sets each beside its twin already running in ordinary finance. Each chapter ends with an honest verdict about which is worse — and the verdicts do not all go one way.</p>
 <blockquote>Crypto did not invent these crimes. It wrote them down.</blockquote><blockquote>Not a market with fraud in it. A fraud with a market attached.</blockquote><blockquote>Opacity doesn't reduce the freezing. It removes the explanation.</blockquote>
+<div class="rule"></div>
+<h2>Why this book exists</h2>
+<p class="body">The book was not planned. For years its author documented crypto incidents in a public research catalogue — classifying every major theft, fraud and collapse since 2010, with a citation for every claim. Somewhere past the six hundredth incident, a pattern became impossible to ignore: most of these crimes were not new. The technology changed. The financial mechanisms didn't.</p>
+<div class="flow">
+<div class="flow-step"><strong><a class="plain" href="https://onchainattack.org">OnChainAttack</a></strong> — 650+ documented incidents, 2010–2026</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step"><strong>The pattern</strong> — the same frauds, moved to a new rail</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step"><strong>Compared to What?</strong> — the book, every claim <a class="plain" href="verify.html">checkable</a></div>
+</div>
+<p class="origin-close">The research came first. The book is one of its results.</p>
 <div class="rule"></div>
 <h2>Two stories from the book</h2>
 <div class="vids">
@@ -90,7 +108,7 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <p class="body">Every incident in this book exists in the public record — court filings, regulator reports, on-chain transactions anyone can read. See it: <a class="plain" href="verify.html">the verification index</a> — claim by claim, artifact by artifact.</p>
 <div class="rule"></div>
 <h2>About the author</h2>
-<p class="body">Dmytro Chystiakov is the author of OAK, a public catalogue of 650+ documented crypto incidents. He has worked in banking, cybersecurity and AI — and wrote the book he needed when he was standing at the door.</p>
+<p class="body">Dmytro Chystiakov is the author of OAK, a public catalogue of 650+ documented crypto incidents. He has worked in banking, cybersecurity and AI — and wrote the book he needed when he was standing at the door. <a class="plain" href="about.html">Why I spent years documenting crypto incidents →</a></p>
 <p class="center"><a class="plain" href="https://onchainattack.org">The free incident catalogue (OAK) on GitHub</a></p>
-<footer>© 2026 Dmytro Chystiakov · All rights reserved</footer>
+<footer><div class="nav"><a class="plain" href="methodology.html">Methodology</a> · <a class="plain" href="standard.html">The standard</a> · <a class="plain" href="about.html">About the author</a> · <a class="plain" href="verify.html">Verify</a></div>© 2026 Dmytro Chystiakov · All rights reserved</footer>
 </div></body></html>
