@@ -268,5 +268,67 @@
   <url>
     <loc>https://comparedtowhatbook.com/verify.html</loc>
     <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/verify.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/verify-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/verify-uk.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comparedtowhatbook.com/verify-es.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://comparedtowhatbook.com/verify-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://comparedtowhatbook.com/verify-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comparedtowhatbook.com/verify.html"/>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/verify-ru.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/verify.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/verify-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/verify-uk.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comparedtowhatbook.com/verify-es.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://comparedtowhatbook.com/verify-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://comparedtowhatbook.com/verify-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comparedtowhatbook.com/verify.html"/>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/verify-uk.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/verify.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/verify-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/verify-uk.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comparedtowhatbook.com/verify-es.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://comparedtowhatbook.com/verify-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://comparedtowhatbook.com/verify-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comparedtowhatbook.com/verify.html"/>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/verify-es.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/verify.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/verify-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/verify-uk.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comparedtowhatbook.com/verify-es.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://comparedtowhatbook.com/verify-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://comparedtowhatbook.com/verify-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comparedtowhatbook.com/verify.html"/>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/verify-pt.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/verify.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/verify-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/verify-uk.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comparedtowhatbook.com/verify-es.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://comparedtowhatbook.com/verify-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://comparedtowhatbook.com/verify-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comparedtowhatbook.com/verify.html"/>
+  </url>
+  <url>
+    <loc>https://comparedtowhatbook.com/verify-de.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/verify.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://comparedtowhatbook.com/verify-ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://comparedtowhatbook.com/verify-uk.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comparedtowhatbook.com/verify-es.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://comparedtowhatbook.com/verify-pt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://comparedtowhatbook.com/verify-de.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comparedtowhatbook.com/verify.html"/>
   </url>
 </urlset>
