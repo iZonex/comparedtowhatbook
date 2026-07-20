@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta name="theme-color" content="#faf7ef">
 <meta property="og:type" content="book">
-<meta property="og:site_name" content="По сравнению с чем?">
+<meta property="og:site_name" content="Compared to What?">
 <meta property="og:title" content="По сравнению с чем? — Дмитрий Чистяков">
 <meta property="og:description" content="В августе 2024-го человек в Вашингтоне потерял $243 миллиона из-за телефонного звонка. Ни одна строка кода не была взломана. Ни один кошелёк не отказал. Всё сработало ровно так, как спроектировано, — и именно к этой проблеме книга относится всерьёз.">
 <meta property="og:url" content="https://comparedtowhatbook.com/ru.html">
@@ -27,7 +27,7 @@
 <meta name="twitter:title" content="По сравнению с чем? — Дмитрий Чистяков">
 <meta name="twitter:description" content="В августе 2024-го человек в Вашингтоне потерял $243 миллиона из-за телефонного звонка. Ни одна строка кода не была взломана. Ни один кошелёк не отказал. Всё сработало ровно так, как спроектировано, — и именно к этой проблеме книга относится всерьёз.">
 <meta name="twitter:image" content="https://comparedtowhatbook.com/assets/og-ru.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "По сравнению с чем?", "inLanguage": "ru", "author": {"@type": "Person", "name": "Дмитрий Чистяков", "sameAs": "https://onchainattack.org"}, "description": "В августе 2024-го человек в Вашингтоне потерял $243 миллиона из-за телефонного звонка. Ни одна строка кода не была взломана. Ни один кошелёк не отказал. Всё сработало ровно так, как спроектировано, — и именно к этой проблеме книга относится всерьёз.", "image": "https://comparedtowhatbook.com/assets/og-ru.png", "url": "https://comparedtowhatbook.com/ru.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Compared to What?", "inLanguage": "ru", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "В августе 2024-го человек в Вашингтоне потерял $243 миллиона из-за телефонного звонка. Ни одна строка кода не была взломана. Ни один кошелёк не отказал. Всё сработало ровно так, как спроектировано, — и именно к этой проблеме книга относится всерьёз.", "image": "https://comparedtowhatbook.com/assets/og-ru.png", "url": "https://comparedtowhatbook.com/ru.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--cream:#faf7ef;--spot:#8a1a12;--ink:#16130e;--soft:#3d362c}
@@ -126,9 +126,9 @@ background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
     var b = f.querySelector('button'); b.disabled = true;
     fetch('https://list.comparedtowhatbook.com/api/subscribe', {method: 'POST', body: new FormData(f)})
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .then(function () { m.className = 'lmsg ok'; m.textContent = 'Загляните в почту — там ждёт ссылка для подтверждения.';
+      .then(function () { m.className = 'lmsg ok'; m.textContent = "Загляните в почту — там ждёт ссылка для подтверждения.";
                            f.style.display = 'none'; })
-      .catch(function () { m.className = 'lmsg'; m.textContent = 'Не отправилось. Попробуйте ещё раз через минуту.';
+      .catch(function () { m.className = 'lmsg'; m.textContent = "Загляните в почту — там ждёт ссылка для подтверждения.';\n                           f.style.display = 'none'; })\n      .catch(function () { m.className = 'lmsg'; m.textContent = 'Не отправилось. Попробуйте ещё раз через минуту.";
                             b.disabled = false; });
   });
 })();
@@ -152,7 +152,7 @@ background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
 <p class="body">Каждый инцидент в книге существует в публичной записи — судебные документы, отчёты регуляторов, транзакции в блокчейне, которые может прочитать кто угодно. Смотрите сами: <a class="plain" href="verify-ru.html">индекс проверки</a> — утверждение за утверждением, артефакт за артефактом.</p>
 <div class="rule"></div>
 <h2>Об авторе</h2>
-<p class="body">Дмитрий Чистяков — автор OAK, публичного каталога 650+ задокументированных криптоинцидентов. Работал в банковской сфере, кибербезопасности и AI — и написал книгу, которой ему самому не хватало, когда он впервые решал, заходить ли в крипту.</p>
+<p class="body">Дмитрий Чистяков — автор OAK, публичного каталога 650+ задокументированных криптоинцидентов. Работал в банковской сфере, кибербезопасности и AI — и написал книгу, которой ему самому не хватало, когда он впервые решал, заходить ли в крипту. <a class="plain" href="about-ru.html">Зачем я годами документировал криптоинциденты →</a></p>
 <p class="center"><a class="plain" href="https://onchainattack.org">Бесплатный каталог инцидентов (OAK) на GitHub</a></p>
 <footer><div class="nav"><a class="plain" href="methodology-ru.html">Методология</a> · <a class="plain" href="standard-ru.html">Стандарт</a> · <a class="plain" href="about-ru.html">Об авторе</a> · <a class="plain" href="verify-ru.html">Проверка</a></div>© Дмитрий Чистяков, 2026 · Все права защищены</footer>
 </div></body></html>

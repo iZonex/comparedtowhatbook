@@ -128,7 +128,7 @@ background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function () { m.className = 'lmsg ok'; m.textContent = "Check your inbox — there's a confirmation link waiting.";
                            f.style.display = 'none'; })
-      .catch(function () { m.className = 'lmsg'; m.textContent = "That didn't go through. Try again in a moment.";
+      .catch(function () { m.className = 'lmsg'; m.textContent = "Check your inbox — there's a confirmation link waiting.\";\n                           f.style.display = 'none'; })\n      .catch(function () { m.className = 'lmsg'; m.textContent = \"That didn't go through. Try again in a moment.";
                             b.disabled = false; });
   });
 })();

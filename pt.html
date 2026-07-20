@@ -17,7 +17,7 @@
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="Compared to What?">
 <meta property="og:title" content="Comparado com o quê? — Dmytro Chystiakov">
-<meta property="og:description" content="Em agosto de 2024, um homem em Washington perdeu US$ 243 milhões por causa de um telefonema. Tudo funcionou exatamente como foi projetado — e é esse o problema que este livro leva a sério.">
+<meta property="og:description" content="Em agosto de 2024, um homem em Washington perdeu US$ 243 milhões por causa de um telefonema. Nenhuma linha de código foi quebrada. Nenhuma carteira falhou. Tudo funcionou exatamente como foi projetado — e é esse o problema que este livro leva a sério.">
 <meta property="og:url" content="https://comparedtowhatbook.com/pt.html">
 <meta property="og:image" content="https://comparedtowhatbook.com/assets/og-pt.png">
 <meta property="og:image:width" content="1200">
@@ -25,9 +25,9 @@
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Comparado com o quê? — Dmytro Chystiakov">
-<meta name="twitter:description" content="Em agosto de 2024, um homem em Washington perdeu US$ 243 milhões por causa de um telefonema. Tudo funcionou exatamente como foi projetado — e é esse o problema que este livro leva a sério.">
+<meta name="twitter:description" content="Em agosto de 2024, um homem em Washington perdeu US$ 243 milhões por causa de um telefonema. Nenhuma linha de código foi quebrada. Nenhuma carteira falhou. Tudo funcionou exatamente como foi projetado — e é esse o problema que este livro leva a sério.">
 <meta name="twitter:image" content="https://comparedtowhatbook.com/assets/og-pt.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Comparado com o quê?", "inLanguage": "pt-BR", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "Em agosto de 2024, um homem em Washington perdeu US$ 243 milhões por causa de um telefonema. Tudo funcionou exatamente como foi projetado — e é esse o problema que este livro leva a sério.", "image": "https://comparedtowhatbook.com/assets/og-pt.png", "url": "https://comparedtowhatbook.com/pt.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Compared to What?", "inLanguage": "pt-BR", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "Em agosto de 2024, um homem em Washington perdeu US$ 243 milhões por causa de um telefonema. Nenhuma linha de código foi quebrada. Nenhuma carteira falhou. Tudo funcionou exatamente como foi projetado — e é esse o problema que este livro leva a sério.", "image": "https://comparedtowhatbook.com/assets/og-pt.png", "url": "https://comparedtowhatbook.com/pt.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--cream:#faf7ef;--spot:#8a1a12;--ink:#16130e;--soft:#3d362c}
@@ -59,6 +59,12 @@ h2{font-size:26px;margin:0 0 12px;text-align:center}
 .center{text-align:center}
 footer{margin-top:56px;border-top:1.5px solid var(--spot);padding-top:18px;text-align:center;color:var(--soft);font-size:14px}
 a.plain{color:var(--spot)}
+
+.vids{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:26px 0 6px}
+.vid{width:min(280px,78vw)}
+.vid video{width:100%;aspect-ratio:9/16;display:block;background:var(--cream);
+box-shadow:0 10px 34px rgba(22,19,14,.22)}
+.vid .cap{text-align:center;font-size:14px;color:var(--soft);margin-top:10px;font-style:italic}
 .list{border:1.5px solid var(--spot);padding:26px 22px;margin:8px 0 0}
 .list h2{margin-bottom:10px}
 .list p.body{margin:0 0 18px}
@@ -120,9 +126,9 @@ background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
     var b = f.querySelector('button'); b.disabled = true;
     fetch('https://list.comparedtowhatbook.com/api/subscribe', {method: 'POST', body: new FormData(f)})
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .then(function () { m.className = 'lmsg ok'; m.textContent = 'Confira seu e-mail: há um link de confirmação esperando.';
+      .then(function () { m.className = 'lmsg ok'; m.textContent = "Confira seu e-mail: há um link de confirmação esperando.";
                            f.style.display = 'none'; })
-      .catch(function () { m.className = 'lmsg'; m.textContent = 'Não foi enviado. Tente de novo daqui a pouco.';
+      .catch(function () { m.className = 'lmsg'; m.textContent = "Confira seu e-mail: há um link de confirmação esperando.';\n                           f.style.display = 'none'; })\n      .catch(function () { m.className = 'lmsg'; m.textContent = 'Não foi enviado. Tente de novo daqui a pouco.";
                             b.disabled = false; });
   });
 })();
@@ -136,7 +142,7 @@ background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
 <p class="body">Cada incidente deste livro existe no registro público — processos judiciais, relatórios de reguladores, transações na blockchain que qualquer pessoa pode ler. Veja você mesmo: <a class="plain" href="verify-pt.html">o índice de verificação</a> — afirmação por afirmação, artefato por artefato.</p>
 <div class="rule"></div>
 <h2>Sobre o autor</h2>
-<p class="body">Dmytro Chystiakov é o autor do OAK, um catálogo público com mais de 650 incidentes cripto documentados. Trabalhou em bancos, cibersegurança e IA — e escreveu o livro de que ele mesmo precisava quando decidia pela primeira vez se entrava em cripto.</p>
+<p class="body">Dmytro Chystiakov é o autor do OAK, um catálogo público com mais de 650 incidentes cripto documentados. Trabalhou em bancos, cibersegurança e IA — e escreveu o livro de que ele mesmo precisava quando decidia pela primeira vez se entrava em cripto. <a class="plain" href="about-pt.html">Por que passei anos documentando incidentes cripto →</a></p>
 <p class="center"><a class="plain" href="https://onchainattack.org">O catálogo gratuito de incidentes (OAK) no GitHub</a></p>
 <footer><div class="nav"><a class="plain" href="methodology-pt.html">Metodologia</a> · <a class="plain" href="standard-pt.html">O padrão</a> · <a class="plain" href="about-pt.html">Sobre o autor</a> · <a class="plain" href="verify-pt.html">Verificação</a></div>© 2026 Dmytro Chystiakov · Todos os direitos reservados</footer>
 </div></body></html>

@@ -1,6 +1,6 @@
 <!doctype html><html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Verglichen womit? — Dmytro Chystiakov</title>
+<title>Verglichen womit? – Dmytro Chystiakov</title>
 <meta name="description" content="Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Keine Zeile Code wurde geknackt. Keine Wallet versagte. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.">
 <link rel="canonical" href="https://comparedtowhatbook.com/de.html">
 <link rel="alternate" hreflang="en" href="https://comparedtowhatbook.com/">
@@ -16,18 +16,18 @@
 <meta name="theme-color" content="#faf7ef">
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="Compared to What?">
-<meta property="og:title" content="Verglichen womit? — Dmytro Chystiakov">
-<meta property="og:description" content="Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.">
+<meta property="og:title" content="Verglichen womit? – Dmytro Chystiakov">
+<meta property="og:description" content="Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Keine Zeile Code wurde geknackt. Keine Wallet versagte. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.">
 <meta property="og:url" content="https://comparedtowhatbook.com/de.html">
 <meta property="og:image" content="https://comparedtowhatbook.com/assets/og-de.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="de_DE">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Verglichen womit? — Dmytro Chystiakov">
-<meta name="twitter:description" content="Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.">
+<meta name="twitter:title" content="Verglichen womit? – Dmytro Chystiakov">
+<meta name="twitter:description" content="Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Keine Zeile Code wurde geknackt. Keine Wallet versagte. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.">
 <meta name="twitter:image" content="https://comparedtowhatbook.com/assets/og-de.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Verglichen womit?", "inLanguage": "de", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.", "image": "https://comparedtowhatbook.com/assets/og-de.png", "url": "https://comparedtowhatbook.com/de.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Compared to What?", "inLanguage": "de", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Keine Zeile Code wurde geknackt. Keine Wallet versagte. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.", "image": "https://comparedtowhatbook.com/assets/og-de.png", "url": "https://comparedtowhatbook.com/de.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--cream:#faf7ef;--spot:#8a1a12;--ink:#16130e;--soft:#3d362c}
@@ -59,6 +59,12 @@ h2{font-size:26px;margin:0 0 12px;text-align:center}
 .center{text-align:center}
 footer{margin-top:56px;border-top:1.5px solid var(--spot);padding-top:18px;text-align:center;color:var(--soft);font-size:14px}
 a.plain{color:var(--spot)}
+
+.vids{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:26px 0 6px}
+.vid{width:min(280px,78vw)}
+.vid video{width:100%;aspect-ratio:9/16;display:block;background:var(--cream);
+box-shadow:0 10px 34px rgba(22,19,14,.22)}
+.vid .cap{text-align:center;font-size:14px;color:var(--soft);margin-top:10px;font-style:italic}
 .list{border:1.5px solid var(--spot);padding:26px 22px;margin:8px 0 0}
 .list h2{margin-bottom:10px}
 .list p.body{margin:0 0 18px}
@@ -120,9 +126,9 @@ background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
     var b = f.querySelector('button'); b.disabled = true;
     fetch('https://list.comparedtowhatbook.com/api/subscribe', {method: 'POST', body: new FormData(f)})
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
-      .then(function () { m.className = 'lmsg ok'; m.textContent = 'Schauen Sie in Ihr Postfach – dort wartet ein Bestätigungslink.';
+      .then(function () { m.className = 'lmsg ok'; m.textContent = "Schauen Sie in Ihr Postfach – dort wartet ein Bestätigungslink.";
                            f.style.display = 'none'; })
-      .catch(function () { m.className = 'lmsg'; m.textContent = 'Das hat nicht geklappt. Versuchen Sie es gleich noch einmal.';
+      .catch(function () { m.className = 'lmsg'; m.textContent = "Schauen Sie in Ihr Postfach – dort wartet ein Bestätigungslink.';\n                           f.style.display = 'none'; })\n      .catch(function () { m.className = 'lmsg'; m.textContent = 'Das hat nicht geklappt. Versuchen Sie es gleich noch einmal.";
                             b.disabled = false; });
   });
 })();
@@ -136,7 +142,7 @@ background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
 <p class="body">Jeder Vorfall in diesem Buch existiert in öffentlichen Aufzeichnungen – Gerichtsakten, Berichte von Aufsichtsbehörden, Transaktionen auf der Blockchain, die jeder lesen kann. Sehen Sie selbst: <a class="plain" href="verify-de.html">der Verifikationsindex</a> – Aussage für Aussage, Beleg für Beleg.</p>
 <div class="rule"></div>
 <h2>Über den Autor</h2>
-<p class="body">Dmytro Chystiakov ist der Autor von OAK, einem öffentlichen Katalog von über 650 dokumentierten Krypto-Vorfällen. Er hat im Bankensektor, in der Cybersicherheit und in der KI gearbeitet – und schrieb das Buch, das ihm selbst fehlte, als er zum ersten Mal überlegte, ob er in Krypto einsteigen soll.</p>
+<p class="body">Dmytro Chystiakov ist der Autor von OAK, einem öffentlichen Katalog von über 650 dokumentierten Krypto-Vorfällen. Er hat im Bankensektor, in der Cybersicherheit und in der KI gearbeitet – und schrieb das Buch, das ihm selbst fehlte, als er zum ersten Mal überlegte, ob er in Krypto einsteigen soll. <a class="plain" href="about-de.html">Warum ich Jahre damit verbrachte, Krypto-Vorfälle zu dokumentieren →</a></p>
 <p class="center"><a class="plain" href="https://onchainattack.org">Der kostenlose Vorfallkatalog (OAK) auf GitHub</a></p>
 <footer><div class="nav"><a class="plain" href="methodology-de.html">Methodik</a> · <a class="plain" href="standard-de.html">Der Standard</a> · <a class="plain" href="about-de.html">Über den Autor</a> · <a class="plain" href="verify-de.html">Verifikation</a></div>© 2026 Dmytro Chystiakov · Alle Rechte vorbehalten</footer>
 </div></body></html>
