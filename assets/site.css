@@ -43,6 +43,7 @@ a:hover{color:var(--spot-dark)}
 .langs{display:flex;gap:12px;font-family:var(--mono);font-size:11px;
   letter-spacing:.06em;color:var(--muted);flex-wrap:wrap}
 .langs a{color:var(--muted)}
+.l-code{display:none}
 .langs a:hover{color:var(--spot)}
 
 /* ── герой ───────────────────────────────────────────────────────── */
@@ -84,7 +85,7 @@ h1.title .b{color:var(--spot)}
 /* ── что это ─────────────────────────────────────────────────────── */
 .what{border-bottom:1px solid var(--rule);background:var(--bg)}
 .what .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center;
-  padding:84px 0}
+  padding-top:84px;padding-bottom:84px}
 .stat{font-weight:400;font-size:64px;line-height:1;color:var(--ink)}
 .stat-label{font-family:var(--mono);font-size:12px;letter-spacing:.06em;
   color:var(--muted);margin-top:8px}
@@ -117,7 +118,7 @@ h1.title .b{color:var(--spot)}
 
 /* ── две истории ─────────────────────────────────────────────────── */
 .stories{border-top:1px solid var(--rule);background:var(--panel)}
-.stories .inner{padding:80px 0}
+.stories .inner{padding-top:80px;padding-bottom:80px}
 .vids{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
 .vid figure{margin:0}
 .vid .frame{position:relative;width:100%;aspect-ratio:2/3;border:1px solid var(--border);
@@ -153,7 +154,7 @@ h1.title .b{color:var(--spot)}
 /* ── автор ───────────────────────────────────────────────────────── */
 .author{border-top:1px solid var(--rule);background:var(--panel)}
 .author .grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;
-  padding:72px 0;position:relative}
+  padding-top:72px;padding-bottom:72px;position:relative}
 .author .float-right{position:absolute;top:40px;right:40px;width:70px;animation-duration:7s}
 .author .portrait{width:132px;height:132px;border-radius:50%;border:1px solid var(--border);
   object-fit:cover;background:var(--bg)}
@@ -174,34 +175,50 @@ footer .rights{font-family:var(--mono);font-size:11px;color:var(--muted)}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 .no-js .reveal{opacity:1;transform:none}
+/* На печати и в режиме чтения прокрутки нет, а значит нет и события
+   появления: без этого всё ниже первого экрана печаталось бы пустым. */
+@media print{.reveal{opacity:1;transform:none}}
 
 /* ── узкие экраны ────────────────────────────────────────────────── */
 @media (max-width:900px){
   .wrap{padding:0 24px}
   .hero{padding:40px 24px 64px}
-  .what .grid{grid-template-columns:1fr;gap:32px;padding:60px 0}
+  .what .grid{grid-template-columns:1fr;gap:32px}
   .cards{grid-template-columns:1fr}
   .vids{grid-template-columns:1fr}
   .author .grid{grid-template-columns:1fr;gap:24px;text-align:left}
   .evidence .float-right,.signup .float-right,.author .float-right{
     position:static;display:block;margin:0 0 20px;width:110px}
   .hook .inner{padding:56px 24px 60px}
-  .hook p{font-size:23px}
   .sub{font-size:22px}
   .kick{font-size:19px}
   .evidence{padding:64px 0}
   .signup{padding:64px 0}
-  .stories .inner{padding:60px 0}
 }
 @media (max-width:900px){
   .top .wrap{flex-direction:column;align-items:flex-start;gap:10px}
   .top nav{gap:14px}
+  .what .grid{padding-top:60px;padding-bottom:60px}
+  .stories .inner{padding-top:60px;padding-bottom:60px}
+  .author .grid{padding-top:56px;padding-bottom:56px}
+  .quote .inner{padding:64px 24px}
+  footer .wrap{padding-top:36px;padding-bottom:48px}
+  .hook p{font-size:21px}
 }
 @media (max-width:620px){
-  .top .wrap{align-items:center;text-align:center}
-  .top nav{gap:14px;justify-content:center}
-  .langs{justify-content:center}
+  /* Шапка на телефоне занимала семь строк из шести с половиной сотен
+     пикселей экрана — и не пускала к содержимому. Липкой ей тут делать
+     нечего, названия языков сокращаются до кодов, набор мельче. */
+  .top{position:static}
+  .top .wrap{align-items:center;text-align:center;gap:8px;
+    padding-top:12px;padding-bottom:12px}
+  .top nav{gap:12px;justify-content:center;font-size:10.5px;max-width:23em}
+  .langs{justify-content:center;gap:14px}
+  .l-full{display:none}
+  .l-code{display:inline}
   .evidence h2{font-size:34px}
+  .hero{padding-top:32px}
+  .cta .note{max-width:26ch;margin:0 auto}
 }
 
 /* ── внутренние страницы ─────────────────────────────────────────── */
