@@ -65,6 +65,19 @@ a.plain{color:var(--spot)}
 .vid video{width:100%;aspect-ratio:9/16;display:block;background:var(--cream);
 box-shadow:0 10px 34px rgba(22,19,14,.22)}
 .vid .cap{text-align:center;font-size:14px;color:var(--soft);margin-top:10px;font-style:italic}
+.list{border:1.5px solid var(--spot);padding:26px 22px;margin:8px 0 0}
+.list h2{margin-bottom:10px}
+.list p.body{margin:0 0 18px}
+.lf{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.lf input[type=email]{flex:1;min-width:240px;padding:13px 14px;font:inherit;font-size:17px;
+background:var(--cream);border:1.5px solid var(--soft);color:var(--ink)}
+.lf input[type=email]:focus{outline:none;border-color:var(--spot)}
+.lf button{padding:13px 24px;font:inherit;font-size:17px;font-weight:700;cursor:pointer;
+background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
+.lf .hp{position:absolute;left:-9999px}
+.lmsg{text-align:center;font-size:16px;margin-top:14px;min-height:1.3em}
+.lmsg.ok{color:var(--spot);font-weight:700}
+.lfine{text-align:center;color:var(--soft);font-size:13.5px;margin-top:14px}
 </style></head><body><div class="wrap">
 <div class="lang"><a href="ru.html">Русский</a> · <a href="uk.html">Українська</a> · <a href="es.html">Español</a> · <a href="pt.html">Português</a> · <a href="de.html">Deutsch</a></div>
 <div class="kick">A field guide to the money you were told to fear</div>
@@ -74,9 +87,9 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <div class="what">A research-driven book about recurring financial patterns — built on years of documented incidents and publicly verifiable evidence.</div>
 <img class="cover" src="assets/cover-en.png" alt="COMPARED TO WHAT?">
 <div class="btns"><a class="btn primary" href="#buy">Buy the book</a>
-<a class="btn" href="assets/sample-en.pdf">Read the free sample (PDF)</a></div>
+<a class="btn" href="#list">Get the first case</a></div>
 <div class="soon" id="buy">On sale soon — Amazon · Apple Books · Google Play</div>
-<div class="note">Cover, introduction and the full first chapter.</div>
+<div class="note">Sent free to the release list — before the book is on sale.</div>
 <div class="rule"></div>
 <p class="body">In August 2024, a man in Washington lost $243 million to a phone call. No code was broken. No wallet failed. Everything worked exactly as designed — and that is the problem this book takes seriously.</p>
 <p class="body">Built on a public catalogue of 650+ documented incidents, the book takes crypto's real dangers one at a time and sets each beside its twin already running in ordinary finance. Each chapter ends with an honest verdict about which is worse — and the verdicts do not all go one way.</p>
@@ -92,6 +105,34 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <div class="flow-step"><strong>Compared to What?</strong> — the book, every claim <a class="plain" href="verify.html">checkable</a></div>
 </div>
 <p class="origin-close">The research came first. The book is one of its results. The research remains public.</p>
+<div class="rule"></div>
+<section class="list" id="list">
+<h2>Before it's published</h2>
+<p class="body">Subscribe and I'll send you <strong>The First Case</strong>: the opening of the book and its first chapter in full — the phone call that cost one man $243&nbsp;million. After that, one email when the book is released. Nothing else.</p>
+<form class="lf" id="lform">
+<input type="email" name="email" required placeholder="your@email" aria-label="your@email">
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="lang" value="en">
+<button type="submit">Send me the first case</button>
+</form>
+<div class="lmsg" id="lmsg" role="status"></div>
+<div class="lfine">Confirmation by email, unsubscribe in one click. The address is used for this list and nothing else — no tracking, no sharing.</div>
+</section>
+<script>
+(function () {
+  var f = document.getElementById('lform'), m = document.getElementById('lmsg');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var b = f.querySelector('button'); b.disabled = true;
+    fetch('https://list.comparedtowhatbook.com/api/subscribe', {method: 'POST', body: new FormData(f)})
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function () { m.className = 'lmsg ok'; m.textContent = "Check your inbox — there's a confirmation link waiting.";
+                           f.style.display = 'none'; })
+      .catch(function () { m.className = 'lmsg'; m.textContent = "That didn't go through. Try again in a moment.";
+                            b.disabled = false; });
+  });
+})();
+</script>
 <div class="rule"></div>
 <h2>Two stories from the book</h2>
 <div class="vids">

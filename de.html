@@ -59,6 +59,19 @@ h2{font-size:26px;margin:0 0 12px;text-align:center}
 .center{text-align:center}
 footer{margin-top:56px;border-top:1.5px solid var(--spot);padding-top:18px;text-align:center;color:var(--soft);font-size:14px}
 a.plain{color:var(--spot)}
+.list{border:1.5px solid var(--spot);padding:26px 22px;margin:8px 0 0}
+.list h2{margin-bottom:10px}
+.list p.body{margin:0 0 18px}
+.lf{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.lf input[type=email]{flex:1;min-width:240px;padding:13px 14px;font:inherit;font-size:17px;
+background:var(--cream);border:1.5px solid var(--soft);color:var(--ink)}
+.lf input[type=email]:focus{outline:none;border-color:var(--spot)}
+.lf button{padding:13px 24px;font:inherit;font-size:17px;font-weight:700;cursor:pointer;
+background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
+.lf .hp{position:absolute;left:-9999px}
+.lmsg{text-align:center;font-size:16px;margin-top:14px;min-height:1.3em}
+.lmsg.ok{color:var(--spot);font-weight:700}
+.lfine{text-align:center;color:var(--soft);font-size:13.5px;margin-top:14px}
 </style></head><body><div class="wrap">
 <div class="lang"><a href="index.html">English</a> · <a href="ru.html">Русский</a> · <a href="uk.html">Українська</a> · <a href="es.html">Español</a> · <a href="pt.html">Português</a></div>
 <div class="kick">Ein Feldführer zu dem Geld, vor dem man Sie gewarnt hat</div>
@@ -68,9 +81,9 @@ a.plain{color:var(--spot)}
 <div class="what">Ein Buch aus jahrelanger Recherche über wiederkehrende Finanzmuster – gebaut auf dokumentierten Vorfällen und öffentlich nachprüfbaren Belegen.</div>
 <img class="cover" src="assets/cover-de.png" alt="VERGLICHEN WOMIT?">
 <div class="btns"><a class="btn primary" href="#buy">Das Buch kaufen</a>
-<a class="btn" href="assets/sample-de.pdf">Leseprobe lesen (PDF)</a></div>
+<a class="btn" href="#list">Den ersten Fall erhalten</a></div>
 <div class="soon" id="buy">Bald erhältlich – Amazon · Apple Books · Google Play</div>
-<div class="note">Umschlag, Einleitung und das komplette erste Kapitel.</div>
+<div class="note">Kostenlos für die Release-Liste, bevor das Buch im Handel ist.</div>
 <div class="rule"></div>
 <p class="body">Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Keine Zeile Code wurde geknackt. Keine Wallet versagte. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.</p>
 <p class="body">Gebaut auf einem öffentlichen Katalog von über 650 dokumentierten Vorfällen, nimmt das Buch die echten Gefahren von Krypto einzeln vor und stellt jede neben ihren Zwilling, der längst im gewöhnlichen Finanzsystem läuft. Jedes Kapitel endet mit einem ehrlichen Urteil, was schlimmer ist – und die Urteile fallen nicht alle in dieselbe Richtung.</p>
@@ -86,6 +99,34 @@ a.plain{color:var(--spot)}
 <div class="flow-step"><strong>Verglichen womit?</strong> – das Buch, jede Aussage <a class="plain" href="verify.html">nachprüfbar</a></div>
 </div>
 <p class="origin-close">Zuerst kam die Forschung. Das Buch ist eines ihrer Ergebnisse. Die Forschung bleibt öffentlich.</p>
+<div class="rule"></div>
+<section class="list" id="list">
+<h2>Bevor es erscheint</h2>
+<p class="body">Tragen Sie sich ein, und ich schicke Ihnen <strong>Den ersten Fall</strong>: den Anfang des Buches und das komplette erste Kapitel – den Telefonanruf, der einen Mann 243&nbsp;Millionen Dollar gekostet hat. Danach eine E-Mail, wenn das Buch erscheint. Sonst nichts.</p>
+<form class="lf" id="lform">
+<input type="email" name="email" required placeholder="ihre@mail" aria-label="ihre@mail">
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="lang" value="de">
+<button type="submit">Den ersten Fall senden</button>
+</form>
+<div class="lmsg" id="lmsg" role="status"></div>
+<div class="lfine">Bestätigung per E-Mail, Abmeldung mit einem Klick. Die Adresse wird nur für diese Liste verwendet – kein Tracking, keine Weitergabe.</div>
+</section>
+<script>
+(function () {
+  var f = document.getElementById('lform'), m = document.getElementById('lmsg');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var b = f.querySelector('button'); b.disabled = true;
+    fetch('https://list.comparedtowhatbook.com/api/subscribe', {method: 'POST', body: new FormData(f)})
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function () { m.className = 'lmsg ok'; m.textContent = 'Schauen Sie in Ihr Postfach – dort wartet ein Bestätigungslink.';
+                           f.style.display = 'none'; })
+      .catch(function () { m.className = 'lmsg'; m.textContent = 'Das hat nicht geklappt. Versuchen Sie es gleich noch einmal.';
+                            b.disabled = false; });
+  });
+})();
+</script>
 <div class="rule"></div>
 <h2>Die Sechs</h2>
 <p class="body center">Sechs Regeln, die die meisten Diebstähle in diesem Buch stoppen. Kostenloses Poster – drucken Sie es, teilen Sie es.</p>

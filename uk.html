@@ -65,6 +65,19 @@ a.plain{color:var(--spot)}
 .vid video{width:100%;aspect-ratio:9/16;display:block;background:var(--cream);
 box-shadow:0 10px 34px rgba(22,19,14,.22)}
 .vid .cap{text-align:center;font-size:14px;color:var(--soft);margin-top:10px;font-style:italic}
+.list{border:1.5px solid var(--spot);padding:26px 22px;margin:8px 0 0}
+.list h2{margin-bottom:10px}
+.list p.body{margin:0 0 18px}
+.lf{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.lf input[type=email]{flex:1;min-width:240px;padding:13px 14px;font:inherit;font-size:17px;
+background:var(--cream);border:1.5px solid var(--soft);color:var(--ink)}
+.lf input[type=email]:focus{outline:none;border-color:var(--spot)}
+.lf button{padding:13px 24px;font:inherit;font-size:17px;font-weight:700;cursor:pointer;
+background:var(--spot);color:var(--cream);border:2px solid var(--spot)}
+.lf .hp{position:absolute;left:-9999px}
+.lmsg{text-align:center;font-size:16px;margin-top:14px;min-height:1.3em}
+.lmsg.ok{color:var(--spot);font-weight:700}
+.lfine{text-align:center;color:var(--soft);font-size:13.5px;margin-top:14px}
 </style></head><body><div class="wrap">
 <div class="lang"><a href="index.html">English</a> · <a href="ru.html">Русский</a> · <a href="es.html">Español</a> · <a href="pt.html">Português</a> · <a href="de.html">Deutsch</a></div>
 <div class="kick">Путівник по грошах, яких вас навчили боятися</div>
@@ -74,9 +87,9 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <div class="what">Книжка-дослідження про повторювані фінансові схеми — побудована на роках задокументованих інцидентів і публічно перевірюваних доказах.</div>
 <img class="cover" src="assets/cover-uk.png" alt="ПОРІВНЯНО З ЧИМ?">
 <div class="btns"><a class="btn primary" href="#buy">Купити книжку</a>
-<a class="btn" href="assets/sample-uk.pdf">Читати безкоштовний фрагмент (PDF)</a></div>
+<a class="btn" href="#list">Отримати «Першу справу»</a></div>
 <div class="soon" id="buy">Скоро у продажу — Amazon · Apple Books · Google Play</div>
-<div class="note">Обкладинка, вступ і весь перший розділ.</div>
+<div class="note">Безкоштовно — списку релізу, до виходу книжки.</div>
 <div class="rule"></div>
 <p class="body">У серпні 2024-го людина у Вашингтоні втратила $243 мільйони через телефонний дзвінок. Жодного рядка коду не зламали. Жоден гаманець не відмовив. Усе спрацювало рівно так, як спроєктовано, — і саме до цієї проблеми книжка ставиться серйозно.</p>
 <p class="body">Побудована на публічному каталозі з 650+ задокументованих інцидентів, книжка бере справжні небезпеки крипти по одній і ставить кожну поруч із її двійником, що вже працює у звичайних фінансах. Кожен розділ закінчується чесним вердиктом, що гірше, — і вердикти не всі в один бік.</p>
@@ -92,6 +105,34 @@ box-shadow:0 10px 34px rgba(22,19,14,.22)}
 <div class="flow-step"><strong>Порівняно з чим?</strong> — книжка, кожне твердження <a class="plain" href="verify.html">можна перевірити</a></div>
 </div>
 <p class="origin-close">Спочатку було дослідження. Книжка — один із його результатів. Дослідження залишається публічним.</p>
+<div class="rule"></div>
+<section class="list" id="list">
+<h2>До виходу книжки</h2>
+<p class="body">Підпишіться — і я надішлю <strong>«Першу справу»</strong>: початок книжки і весь перший розділ — телефонний дзвінок, який коштував людині $243&nbsp;мільйони. Далі один лист, коли книжка вийде. Більше нічого.</p>
+<form class="lf" id="lform">
+<input type="email" name="email" required placeholder="ваш@email" aria-label="ваш@email">
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="lang" value="uk">
+<button type="submit">Надіслати першу справу</button>
+</form>
+<div class="lmsg" id="lmsg" role="status"></div>
+<div class="lfine">Підтвердження поштою, відписка в один клік. Адреса використовується лише для цього списку — без трекінгу і передачі третім особам.</div>
+</section>
+<script>
+(function () {
+  var f = document.getElementById('lform'), m = document.getElementById('lmsg');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var b = f.querySelector('button'); b.disabled = true;
+    fetch('https://list.comparedtowhatbook.com/api/subscribe', {method: 'POST', body: new FormData(f)})
+      .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function () { m.className = 'lmsg ok'; m.textContent = 'Зазирніть у пошту — там чекає посилання для підтвердження.';
+                           f.style.display = 'none'; })
+      .catch(function () { m.className = 'lmsg'; m.textContent = 'Не надіслалося. Спробуйте ще раз за хвилину.';
+                            b.disabled = false; });
+  });
+})();
+</script>
 <div class="rule"></div>
 <h2>Дві історії з книжки</h2>
 <div class="vids">
