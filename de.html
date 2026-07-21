@@ -83,6 +83,8 @@
   <div class="inner"><p class="reveal">Krypto hat keines dieser Verbrechen erfunden. Es hat sie aufgeschrieben.</p></div>
 </section>
 
+
+
 <section class="evidence">
   <div class="wrap">
     <img class="spot-img float-right" src="/assets/spot/magnifier.png" alt="">
@@ -92,6 +94,8 @@
     <div class="cards"><div class="card reveal"><div class="label">Der Katalog</div><div class="name">OnChainAttack (OAK)</div><p>650+ dokumentierte Vorfälle – jeder klassifiziert, mit einer Quelle neben jeder Aussage. Kostenlos und öffentlich auf GitHub.</p><a href="https://onchainattack.org" target="_blank" rel="noopener">onchainattack.org →</a></div><div class="card reveal"><div class="label">Der Nachweis</div><div class="name">Verifikationsindex</div><p>Aussage für Aussage, Beleg für Beleg. Jede Zahl im Buch lässt sich bis zu der öffentlichen Aufzeichnung zurückverfolgen, die sie belegt.</p><a href="verify-de.html">Der Verifikationsindex →</a></div><div class="card reveal"><div class="label">Das Fazit</div><div class="name">Die Sechs</div><p>Sechs Regeln, die die meisten Diebstähle in diesem Buch stoppen. Kostenloses Poster – drucken Sie es, teilen Sie es.</p><a href="assets/the-six-de.pdf">Poster herunterladen (PDF) →</a></div></div>
   </div>
 </section>
+
+
 
 
 
@@ -168,6 +172,19 @@
       box.classList.contains('playing') ? stop() : play();
     });
   });
+
+  // Проба «шесть и четыре»: по ответу раскрываем полные адреса и вердикт.
+  var demo = document.querySelector('.demo');
+  if (demo) {
+    var lead = demo.querySelector('.verdict .lead');
+    demo.querySelectorAll('.choices button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (lead) lead.textContent =
+          btn.getAttribute('data-a') === 'same' ? "" : "";
+        demo.classList.add('done');
+      });
+    });
+  }
 
   var f = document.getElementById('lform'), m = document.getElementById('lmsg');
   if (!f) return;

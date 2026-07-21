@@ -83,6 +83,8 @@
   <div class="inner"><p class="reveal">Крипта не винайшла ці злочини. Вона їх записала.</p></div>
 </section>
 
+
+
 <section class="evidence">
   <div class="wrap">
     <img class="spot-img float-right" src="/assets/spot/magnifier.png" alt="">
@@ -92,6 +94,8 @@
     <div class="cards"><div class="card reveal"><div class="label">Каталог</div><div class="name">OnChainAttack (OAK)</div><p>650+ задокументованих інцидентів, кожен класифікований, з джерелом біля кожного твердження. Безкоштовний і публічний на GitHub.</p><a href="https://onchainattack.org" target="_blank" rel="noopener">onchainattack.org →</a></div><div class="card reveal"><div class="label">Доказ</div><div class="name">Індекс перевірки</div><p>Твердження за твердженням, артефакт за артефактом. Кожне число в книжці стоїть поруч із публічним документом, який його підтверджує.</p><a href="verify-uk.html">Індекс перевірки →</a></div><div class="card reveal"><div class="label">Висновок</div><div class="name">Шістка</div><p>Шість правил, що зупиняють більшість крадіжок із книжки. Безкоштовний постер — роздрукуйте, поділіться.</p><a href="assets/the-six-uk.pdf">Завантажити постер (PDF) →</a></div></div>
   </div>
 </section>
+
+
 
 <section class="stories"><div class="wrap inner"><div class="eyebrow reveal">Дві історії з книжки</div><div class="vids"><div class="vid reveal"><figure><div class="frame" data-video><video src="/assets/video/v01-uk.mp4" poster="/assets/video/poster-01-uk.jpg" muted playsinline loop preload="none"></video></div><figcaption><img src="/assets/spot/phone.png" alt="">Розділ 1 — Дзвінок</figcaption></figure></div><div class="vid reveal"><figure><div class="frame" data-video><video src="/assets/video/v02-uk.mp4" poster="/assets/video/poster-02-uk.jpg" muted playsinline loop preload="none"></video></div><figcaption><img src="/assets/spot/coin.png" alt="">Розділ 8 — 98,6%</figcaption></figure></div></div></div></section>
 
@@ -168,6 +172,19 @@
       box.classList.contains('playing') ? stop() : play();
     });
   });
+
+  // Проба «шесть и четыре»: по ответу раскрываем полные адреса и вердикт.
+  var demo = document.querySelector('.demo');
+  if (demo) {
+    var lead = demo.querySelector('.verdict .lead');
+    demo.querySelectorAll('.choices button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (lead) lead.textContent =
+          btn.getAttribute('data-a') === 'same' ? "" : "";
+        demo.classList.add('done');
+      });
+    });
+  }
 
   var f = document.getElementById('lform'), m = document.getElementById('lmsg');
   if (!f) return;

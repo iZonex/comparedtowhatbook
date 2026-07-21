@@ -170,6 +170,69 @@ h1.title .b{color:var(--spot)}
 .author p{font-size:20px;line-height:1.55;color:var(--ink);margin:14px 0 16px;max-width:60ch}
 .author .more{font-family:var(--mono);font-size:13px;letter-spacing:.05em}
 
+/* ── пластины: гравюры из книги ──────────────────────────────────── */
+.plates{border-top:1px solid var(--rule);background:var(--panel)}
+.plates .inner{padding-top:84px;padding-bottom:84px}
+.plates h2{font-weight:400;font-size:clamp(34px,5vw,52px);line-height:1.05;
+  margin:12px 0 14px}
+.plates .intro{font-size:19px;line-height:1.6;color:var(--soft);max-width:60ch;margin:0 0 48px}
+.plate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.plate{margin:0;display:flex;flex-direction:column}
+/* Гравюра сама кремовая (#faf7ef) — на панели (#f4efe2) рамка её слегка
+   приподнимает. Никакой генерации: это те же SVG, что уходят в печать. */
+.plate .frame{background:var(--bg);border:1px solid var(--border);padding:16px;
+  box-shadow:0 14px 34px -24px rgba(33,29,22,.45);
+  transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s ease}
+.plate:hover .frame{transform:translateY(-6px);box-shadow:0 24px 50px -24px rgba(33,29,22,.55)}
+.plate img{display:block;width:100%;height:auto}
+.plate figcaption{margin-top:16px;font-size:16px;line-height:1.5;color:var(--soft)}
+.plate .pt{color:var(--ink)}
+.plate .pn{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--spot);margin-bottom:6px}
+
+/* ── проба: шесть и четыре ────────────────────────────────────────── */
+.demo{padding:92px 0}
+.demo .inner{max-width:720px;margin:0 auto;text-align:center}
+.demo h2{font-weight:400;font-size:clamp(30px,4.4vw,44px);line-height:1.08;margin:12px 0 14px}
+.demo .intro{font-size:19px;line-height:1.6;color:var(--soft);margin:0 auto 34px;max-width:54ch}
+.addr-pair{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:0 0 30px}
+.addr{flex:1 1 280px;max-width:420px;font-family:var(--mono);
+  font-size:clamp(14px,1.9vw,17px);line-height:1.75;word-break:break-all;
+  background:var(--bg);border:1px solid var(--border);border-radius:3px;
+  padding:22px 22px 20px;color:var(--ink);text-align:left}
+.addr .lab{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:12px}
+.addr .long{display:none}
+.addr .long .mid{color:var(--spot);background:#f2e2de;padding:0 2px;border-radius:2px}
+.demo.done .addr .short,.no-js .demo .addr .short{display:none}
+.demo.done .addr .long,.no-js .demo .addr .long{display:inline}
+.demo .ask{font-size:21px;color:var(--ink);margin:0 0 22px}
+.demo .choices{display:flex;gap:14px;justify-content:center}
+.demo .choices button{font-family:var(--mono);font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;padding:15px 30px;border-radius:2px;border:1px solid #b8b09a;
+  background:var(--bg);color:var(--ink);cursor:pointer;
+  transition:background .2s ease,border-color .2s ease,color .2s ease}
+.demo .choices button:hover{border-color:var(--spot);color:var(--spot)}
+.demo.done .choices,.demo.done .ask,.no-js .demo .choices,.no-js .demo .ask{display:none}
+.demo .verdict{font-size:18px;line-height:1.65;color:var(--ink);margin:26px auto 0;
+  max-width:58ch;opacity:0;transform:translateY(8px);
+  transition:opacity .5s ease,transform .5s ease}
+.demo.done .verdict,.no-js .demo .verdict{opacity:1;transform:none}
+.demo .verdict b{color:var(--spot);font-weight:400;font-family:var(--mono);font-size:.9em}
+.demo .verdict .lead{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+
+/* ── типографика: тонкая доводка ─────────────────────────────────── */
+h1.title,.evidence h2,.signup h2,.plates h2,.demo h2,.page h1,.hook p,.quote p{
+  text-wrap:balance}
+.blurb,.sub,.what .body,.what .lead,.plates .intro,.demo .intro,.author p,
+.page p.body,.evidence .intro{text-wrap:pretty}
+/* Внутритекстовые ссылки: тонкое оксбладовое подчёркивание, насыщается наведением. */
+a.plain{text-decoration:underline;text-decoration-color:#d8b3ac;
+  text-decoration-thickness:1px;text-underline-offset:3px;
+  transition:text-decoration-color .25s ease,color .25s ease}
+a.plain:hover{text-decoration-color:var(--spot);color:var(--spot-dark)}
+
 /* ── подвал ──────────────────────────────────────────────────────── */
 footer{border-top:1px solid var(--rule)}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;
@@ -195,6 +258,10 @@ footer .rights{font-family:var(--mono);font-size:11px;color:var(--muted)}
   .what .grid{grid-template-columns:1fr;gap:32px}
   .cards{grid-template-columns:1fr}
   .vids{grid-template-columns:1fr}
+  .plate-grid{grid-template-columns:1fr;gap:22px}
+  .plates .inner{padding-top:60px;padding-bottom:60px}
+  .demo{padding:60px 0}
+  .addr-pair{flex-direction:column;align-items:stretch}
   .author .agrid,.signup .sgrid{grid-template-columns:1fr;gap:28px;justify-items:start}
   .evidence .float-right{position:static;display:block;margin:0 0 20px;width:110px}
   .sig-art,.bio-art{width:100px}

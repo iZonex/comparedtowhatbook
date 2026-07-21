@@ -83,6 +83,8 @@
   <div class="inner"><p class="reveal">Crypto did not invent these crimes. It wrote them down.</p></div>
 </section>
 
+<section class="plates"><div class="wrap inner"><div class="eyebrow spot reveal">From the book</div><h2 class="reveal">The evidence, drawn</h2><p class="intro reveal">No stock art, no AI. Every figure redraws itself from a committed data file — the same numbers anyone can check. Three plates from the book.</p><div class="plate-grid"><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-02.svg" alt="Two error bars: crypto&#x27;s loss estimate is narrow and capped, while the traditional-fraud estimate is an open floor with an arrow leaving the top of the frame." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Plate</span><span class="pt">Ceiling and floor.</span> Crypto&#x27;s $20.40B is a near-complete count. Card fraud&#x27;s $33.41B is one measured corner — the rest is counted nowhere.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-05.svg" alt="Two frames of the same years side by side: the left is filled with 659 marks, one per documented crypto theft; the right, for the traditional financial system, is empty of any public record." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Plate</span><span class="pt">The empty frame.</span> On the left, 659 documented crypto thefts. On the right, the same years in ordinary finance — no public record to fill it.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-08.svg" alt="A grid of 1,000 cells, each standing for about 7,000 tokens; 986 are filled solid and 14 left blank — 98.6 percent of the tokens ended in a pump-and-dump or a rug pull." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Plate</span><span class="pt">A fraud with a market.</span> One market, a thousand cells. 98.6% of its tokens ended in a pump-and-dump or a rug pull.</figcaption></figure></div></div></section>
+
 <section class="evidence">
   <div class="wrap">
     <img class="spot-img float-right" src="/assets/spot/magnifier.png" alt="">
@@ -90,6 +92,21 @@
     <h2 class="reveal">Every number is checkable</h2>
     <p class="intro reveal">Every incident in this book exists in the public record — court filings, regulator reports, on-chain transactions anyone can read. See it: <a class="plain" href="verify.html">the verification index</a> — claim by claim, artifact by artifact.</p>
     <div class="cards"><div class="card reveal"><div class="label">The catalogue</div><div class="name">OnChainAttack (OAK)</div><p>650+ documented incidents, every one classified with a citation for every claim. Free and public on GitHub.</p><a href="https://onchainattack.org" target="_blank" rel="noopener">onchainattack.org →</a></div><div class="card reveal"><div class="label">The proof</div><div class="name">Verification index</div><p>Claim by claim, artifact by artifact. Follow any number in the book back to the public record that checks it.</p><a href="verify.html">The verification index →</a></div><div class="card reveal"><div class="label">The takeaway</div><div class="name">The Six</div><p>Six rules that stop most of the thefts in the book. A free poster — print it, share it.</p><a href="assets/the-six-en.pdf">Download the poster (PDF) →</a></div></div>
+  </div>
+</section>
+
+<section class="demo" id="try">
+  <div class="wrap inner">
+    <div class="eyebrow spot reveal">Check it yourself</div>
+    <h2 class="reveal">Six and four</h2>
+    <p class="intro reveal">Your wallet identifies an address by its ends — the first characters and the last. Here are two, exactly as it would show them to you.</p>
+    <div class="addr-pair reveal"><div class="addr"><span class="lab">A transfer you just made</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">9d2E5b1c8f0A6D4b3E7c9A1f0B2c5D8e</span>4E21</span></div><div class="addr"><span class="lab">Another, from the same history</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">0c1B7a4D9e2F8c3A5b6E1d0F4a9C2b7E</span>4E21</span></div></div>
+    <p class="ask reveal">Same address, or different?</p>
+    <div class="choices reveal">
+      <button type="button" data-a="same">Same</button>
+      <button type="button" data-a="diff">Different</button>
+    </div>
+    <p class="verdict"><span class="lead"></span>The ends are identical — <b>0x7A3F … 4E21</b> — and that is all your wallet ever showed you. The middles are completely different. An attacker slips a lookalike into your history so you copy the wrong one and send your money to them. It is the shortest chapter in the book, because the whole mechanism is one sentence.</p>
   </div>
 </section>
 
@@ -168,6 +185,19 @@
       box.classList.contains('playing') ? stop() : play();
     });
   });
+
+  // Проба «шесть и четыре»: по ответу раскрываем полные адреса и вердикт.
+  var demo = document.querySelector('.demo');
+  if (demo) {
+    var lead = demo.querySelector('.verdict .lead');
+    demo.querySelectorAll('.choices button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (lead) lead.textContent =
+          btn.getAttribute('data-a') === 'same' ? "Most people say the same. Look:" : "You caught it — most don't. Look:";
+        demo.classList.add('done');
+      });
+    });
+  }
 
   var f = document.getElementById('lform'), m = document.getElementById('lmsg');
   if (!f) return;
