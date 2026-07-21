@@ -43,7 +43,8 @@ a:hover{color:var(--spot-dark)}
 .langs{display:flex;gap:12px;font-family:var(--mono);font-size:11px;
   letter-spacing:.06em;color:var(--muted);flex-wrap:wrap}
 .langs a{color:var(--muted)}
-.l-code{display:none}
+.l-full{display:none}
+.l-code{display:inline}
 .langs a:hover{color:var(--spot)}
 
 /* ── герой ───────────────────────────────────────────────────────── */
@@ -78,9 +79,9 @@ h1.title .b{color:var(--spot)}
 .hook .inner{max-width:820px;margin:0 auto;padding:76px 40px 80px;text-align:center}
 .hook p{font-size:29px;line-height:1.5;color:var(--ink);margin:0}
 .hook .spot-amount{color:var(--spot);white-space:nowrap}
-.spot-img{display:block;height:auto;animation:float 6s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
-@media (prefers-reduced-motion:reduce){.spot-img{animation:none}}
+/* Иконки статичны: постоянное покачивание (animation:float infinite) читалось
+   как «ползут по краям», особенно когда спот висит в поле сбоку от текста. */
+.spot-img{display:block;height:auto}
 
 /* ── что это ─────────────────────────────────────────────────────── */
 .what{border-bottom:1px solid var(--rule);background:var(--bg)}
