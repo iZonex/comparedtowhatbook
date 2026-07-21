@@ -100,9 +100,12 @@ h1.title .b{color:var(--spot)}
   letter-spacing:-.01em;margin:0}
 
 /* ── доказательства ──────────────────────────────────────────────── */
-.evidence{position:relative;padding:88px 0}
-.evidence .float-right{position:absolute;top:56px;right:40px;width:150px;opacity:.9;
-  animation-duration:8s}
+.evidence{padding:88px 0}
+/* Спот держим внутри колонки контента, а не секции во всю ширину: без
+   позиционированной .wrap right:40px отсчитывался от края экрана, и на
+   мониторе шире 1180 гравюра уезжала в поле справа от текста. */
+.evidence .wrap{position:relative}
+.evidence .float-right{position:absolute;top:2px;right:40px;width:128px;opacity:.9}
 .evidence h2{font-weight:400;font-size:46px;line-height:1.05;margin:14px 0 12px;
   max-width:20ch}
 .evidence .intro{font-size:19px;line-height:1.6;color:var(--soft);max-width:56ch;
@@ -133,9 +136,14 @@ h1.title .b{color:var(--spot)}
 .vid figcaption img{width:32px;height:auto}
 
 /* ── подписка ────────────────────────────────────────────────────── */
-.signup{position:relative;padding:96px 0}
-.signup .float-right{position:absolute;top:96px;right:40px;width:132px;animation-duration:7.5s}
-.signup .inner{max-width:640px}
+.signup{padding:96px 0}
+/* Форма и гравюра — две колонки, центрированные как единая композиция.
+   Раньше замок был absolute и на широком экране висел у края монитора
+   отдельно от формы; теперь это правая колонка рядом с ней. */
+.signup .sgrid{display:grid;grid-template-columns:minmax(0,600px) auto;gap:64px;
+  align-items:center;justify-content:center}
+.signup .inner{max-width:600px}
+.signup .sig-art{width:132px;justify-self:center}
 .signup h2{font-weight:400;font-size:clamp(34px,5vw,52px);line-height:1.05;margin:18px 0 20px}
 .signup .intro{font-size:20px;line-height:1.55;color:var(--soft);margin:0 0 36px}
 .lf{display:flex;gap:12px;flex-wrap:wrap}
@@ -154,11 +162,11 @@ h1.title .b{color:var(--spot)}
 
 /* ── автор ───────────────────────────────────────────────────────── */
 .author{border-top:1px solid var(--rule);background:var(--panel)}
-.author .grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;
-  padding-top:72px;padding-bottom:72px;position:relative}
-.author .float-right{position:absolute;top:40px;right:40px;width:70px;animation-duration:7s}
-.author .portrait{width:132px;height:132px;border-radius:50%;border:1px solid var(--border);
-  object-fit:cover;background:var(--bg)}
+/* Текст + гравюра ключа — две центрированные колонки (был auto 1fr с одной
+   заполненной колонкой: ключ absolute уезжал вправо, в пустоту 1fr). */
+.author .agrid{display:grid;grid-template-columns:minmax(0,640px) auto;gap:56px;
+  align-items:center;justify-content:center;padding-top:72px;padding-bottom:72px}
+.author .bio-art{width:80px;justify-self:center}
 .author p{font-size:20px;line-height:1.55;color:var(--ink);margin:14px 0 16px;max-width:60ch}
 .author .more{font-family:var(--mono);font-size:13px;letter-spacing:.05em}
 
@@ -187,9 +195,9 @@ footer .rights{font-family:var(--mono);font-size:11px;color:var(--muted)}
   .what .grid{grid-template-columns:1fr;gap:32px}
   .cards{grid-template-columns:1fr}
   .vids{grid-template-columns:1fr}
-  .author .grid{grid-template-columns:1fr;gap:24px;text-align:left}
-  .evidence .float-right,.signup .float-right,.author .float-right{
-    position:static;display:block;margin:0 0 20px;width:110px}
+  .author .agrid,.signup .sgrid{grid-template-columns:1fr;gap:28px;justify-items:start}
+  .evidence .float-right{position:static;display:block;margin:0 0 20px;width:110px}
+  .sig-art,.bio-art{width:100px}
   .hook .inner{padding:56px 24px 60px}
   .sub{font-size:22px}
   .kick{font-size:19px}
@@ -201,7 +209,7 @@ footer .rights{font-family:var(--mono);font-size:11px;color:var(--muted)}
   .top nav{gap:14px}
   .what .grid{padding-top:60px;padding-bottom:60px}
   .stories .inner{padding-top:60px;padding-bottom:60px}
-  .author .grid{padding-top:56px;padding-bottom:56px}
+  .author .agrid{padding-top:56px;padding-bottom:56px}
   .quote .inner{padding:64px 24px}
   footer .wrap{padding-top:36px;padding-bottom:48px}
   .hook p{font-size:21px}
