@@ -30,7 +30,7 @@
 <link rel="preload" href="/assets/font/charter-400-latin.woff2" as="font"
  type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/font/fonts.css">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=d0f6fb3b">
 <script>document.documentElement.classList.remove('no-js')</script>
 </head><body>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Compared to What?", "inLanguage": "de", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "Im August 2024 verlor ein Mann im Bundesstaat Washington 243 Millionen Dollar durch einen Telefonanruf. Keine Zeile Code wurde geknackt. Keine Wallet versagte. Alles funktionierte genau wie vorgesehen – und genau dieses Problem nimmt dieses Buch ernst.", "image": "https://comparedtowhatbook.com/assets/og-de.png", "url": "https://comparedtowhatbook.com/de.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
@@ -83,7 +83,7 @@
   <div class="inner"><p class="reveal">Krypto hat keines dieser Verbrechen erfunden. Es hat sie aufgeschrieben.</p></div>
 </section>
 
-
+<section class="plates"><div class="wrap inner"><div class="eyebrow spot reveal">Aus dem Buch</div><h2 class="reveal">Die Belege, gezeichnet</h2><p class="intro reveal">Keine Stockbilder, keine KI. Jede Grafik zeichnet sich aus ihrer Datendatei neu – dieselben Zahlen, die jeder prüfen kann. Drei Tafeln aus dem Buch.</p><div class="plate-grid"><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-02-de.svg" alt="Zwei Fehlerbalken: die Verlustschätzung bei Krypto ist eng und gedeckelt, die des traditionellen Betrugs ein offener Boden mit einem Pfeil, der oben aus dem Rahmen läuft." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Tafel</span><span class="pt">Decke und Boden.</span> Krypto: 20,40 Mrd. $, eine nahezu vollständige Zählung. Kartenbetrug: 33,41 Mrd. $, aber nur eine Ecke ist gemessen – den Rest zählt niemand.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-05-de.svg" alt="Zwei Rahmen derselben Jahre nebeneinander: der linke ist mit 659 Marken gefüllt, eine je dokumentiertem Krypto-Diebstahl; der rechte, für das traditionelle Finanzsystem, ist ohne jeden öffentlichen Eintrag leer." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Tafel</span><span class="pt">Der leere Rahmen.</span> Links 659 dokumentierte Krypto-Diebstähle. Rechts dieselben Jahre im gewöhnlichen Finanzwesen – kein öffentlicher Eintrag, der ihn füllt.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-08-de.svg" alt="Ein Raster aus 1000 Zellen, jede steht für etwa 7000 Token; 986 sind gefüllt und 14 bleiben leer – 98,6 Prozent der Token endeten in einem Pump-and-Dump oder Rug-Pull." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Tafel</span><span class="pt">Ein Betrug mit einem Markt.</span> Ein Markt, tausend Zellen. 98,6 % seiner Token endeten in einem Pump-and-Dump oder Rug-Pull.</figcaption></figure></div></div></section>
 
 <section class="evidence">
   <div class="wrap">
@@ -95,7 +95,20 @@
   </div>
 </section>
 
-
+<section class="demo" id="try">
+  <div class="wrap inner">
+    <div class="eyebrow spot reveal">Prüfen Sie selbst</div>
+    <h2 class="reveal">Sechs und vier</h2>
+    <p class="intro reveal">Ihre Wallet erkennt eine Adresse an ihren Enden – den ersten Zeichen und den letzten. Hier sind zwei, genau so, wie sie sie Ihnen zeigen würde.</p>
+    <div class="addr-pair reveal"><div class="addr"><span class="lab">Eine Überweisung, die Sie gerade gemacht haben</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">9d2E5b1c8f0A6D4b3E7c9A1f0B2c5D8e</span>4E21</span></div><div class="addr"><span class="lab">Eine weitere, aus demselben Verlauf</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">0c1B7a4D9e2F8c3A5b6E1d0F4a9C2b7E</span>4E21</span></div></div>
+    <p class="ask reveal">Dieselbe Adresse oder verschieden?</p>
+    <div class="choices reveal">
+      <button type="button" data-a="same">Dieselbe</button>
+      <button type="button" data-a="diff">Verschieden</button>
+    </div>
+    <p class="verdict"><span class="lead"></span>Die Enden sind identisch – <b>0x7A3F … 4E21</b> – und mehr hat Ihre Wallet Ihnen nie gezeigt. Die Mitten sind völlig verschieden. Ein Angreifer schiebt eine ähnlich aussehende Adresse in Ihren Verlauf, damit Sie die falsche kopieren und ihm Ihr Geld schicken. Es ist das kürzeste Kapitel des Buches, weil der ganze Mechanismus in einem Satz steht.</p>
+  </div>
+</section>
 
 
 
@@ -180,7 +193,7 @@
     demo.querySelectorAll('.choices button').forEach(function (btn) {
       btn.addEventListener('click', function () {
         if (lead) lead.textContent =
-          btn.getAttribute('data-a') === 'same' ? "" : "";
+          btn.getAttribute('data-a') === 'same' ? "Die meisten sagen: dieselbe. Sehen Sie:" : "Sie haben es erkannt – die meisten nicht. Sehen Sie:";
         demo.classList.add('done');
       });
     });

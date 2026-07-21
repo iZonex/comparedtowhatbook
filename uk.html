@@ -30,7 +30,7 @@
 <link rel="preload" href="/assets/font/charter-400-cyrillic.woff2" as="font"
  type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/font/fonts.css">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=d0f6fb3b">
 <script>document.documentElement.classList.remove('no-js')</script>
 </head><body>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Compared to What?", "inLanguage": "uk", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "У серпні 2024-го людина у Вашингтоні втратила $243 мільйони через телефонний дзвінок. Жодного рядка коду не зламали. Жоден гаманець не відмовив. Усе спрацювало рівно так, як спроєктовано, — і саме до цієї проблеми книжка ставиться серйозно.", "image": "https://comparedtowhatbook.com/assets/og-uk.png", "url": "https://comparedtowhatbook.com/uk.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
@@ -83,7 +83,7 @@
   <div class="inner"><p class="reveal">Крипта не винайшла ці злочини. Вона їх записала.</p></div>
 </section>
 
-
+<section class="plates"><div class="wrap inner"><div class="eyebrow spot reveal">З книги</div><h2 class="reveal">Докази в малюнках</h2><p class="intro reveal">Жодного стоку, жодного ШІ. Кожна фігура перемальовується зі свого файлу даних — ті самі числа, які може перевірити будь-хто. Три гравюри з книги.</p><div class="plate-grid"><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-02-uk.svg" alt="Дві планки похибки: оцінка втрат у крипті вузька й зі стелею, а оцінка традиційного шахрайства — відкрита підлога зі стрілкою, що виходить за верх кадру." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Гравюра</span><span class="pt">Стеля і підлога.</span> Крипта — $20,40 млрд, і це майже повний підрахунок. Карткове шахрайство — $33,41 млрд, але полічено лише один кут; решту не рахує ніхто.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-05-uk.svg" alt="Дві рамки тих самих років поруч: ліва заповнена 659 позначками, по одній на задокументовану криптокрадіжку; права, для традиційної фінансової системи, порожня — жодного публічного запису." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Гравюра</span><span class="pt">Порожня рамка.</span> Ліворуч — 659 задокументованих крадіжок. Праворуч — ті самі роки у звичайних фінансах, і заповнити рамку нічим: публічного запису немає.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-08-uk.svg" alt="Сітка з 1000 клітинок, кожна — приблизно 7000 токенів; 986 залито, 14 залишено порожніми — 98,6 відсотка токенів закінчилися pump-and-dump або rug pull." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Гравюра</span><span class="pt">Шахрайство з ринком навколо.</span> Один ринок, тисяча клітинок. 98,6% його токенів закінчилися pump-and-dump або rug pull.</figcaption></figure></div></div></section>
 
 <section class="evidence">
   <div class="wrap">
@@ -95,7 +95,20 @@
   </div>
 </section>
 
-
+<section class="demo" id="try">
+  <div class="wrap inner">
+    <div class="eyebrow spot reveal">Перевірте самі</div>
+    <h2 class="reveal">Шість і чотири</h2>
+    <p class="intro reveal">Гаманець упізнає адресу за кінцями — перші символи й останні. Ось дві, точно як він показав би їх вам.</p>
+    <div class="addr-pair reveal"><div class="addr"><span class="lab">Переказ, який ви щойно зробили</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">9d2E5b1c8f0A6D4b3E7c9A1f0B2c5D8e</span>4E21</span></div><div class="addr"><span class="lab">Інший, з тієї самої історії</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">0c1B7a4D9e2F8c3A5b6E1d0F4a9C2b7E</span>4E21</span></div></div>
+    <p class="ask reveal">Одна адреса чи різні?</p>
+    <div class="choices reveal">
+      <button type="button" data-a="same">Однакові</button>
+      <button type="button" data-a="diff">Різні</button>
+    </div>
+    <p class="verdict"><span class="lead"></span>Кінці збігаються — <b>0x7A3F … 4E21</b> — і це все, що показав вам гаманець. Середини цілком різні. Зловмисник підкидає схожу адресу у вашу історію, щоб ви скопіювали не ту й надіслали гроші йому. Це найкоротший розділ у книзі, бо весь механізм — одне речення.</p>
+  </div>
+</section>
 
 <section class="stories"><div class="wrap inner"><div class="eyebrow reveal">Дві історії з книжки</div><div class="vids"><div class="vid reveal"><figure><div class="frame" data-video><video src="/assets/video/v01-uk.mp4" poster="/assets/video/poster-01-uk.jpg" muted playsinline loop preload="none"></video></div><figcaption><img src="/assets/spot/phone.png" alt="">Розділ 1 — Дзвінок</figcaption></figure></div><div class="vid reveal"><figure><div class="frame" data-video><video src="/assets/video/v02-uk.mp4" poster="/assets/video/poster-02-uk.jpg" muted playsinline loop preload="none"></video></div><figcaption><img src="/assets/spot/coin.png" alt="">Розділ 8 — 98,6%</figcaption></figure></div></div></div></section>
 
@@ -180,7 +193,7 @@
     demo.querySelectorAll('.choices button').forEach(function (btn) {
       btn.addEventListener('click', function () {
         if (lead) lead.textContent =
-          btn.getAttribute('data-a') === 'same' ? "" : "";
+          btn.getAttribute('data-a') === 'same' ? "Більшість каже «однакові». Дивіться:" : "Ви помітили — більшість ні. Дивіться:";
         demo.classList.add('done');
       });
     });

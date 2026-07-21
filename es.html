@@ -30,7 +30,7 @@
 <link rel="preload" href="/assets/font/charter-400-latin.woff2" as="font"
  type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/font/fonts.css">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=d0f6fb3b">
 <script>document.documentElement.classList.remove('no-js')</script>
 </head><body>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Compared to What?", "inLanguage": "es", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "En agosto de 2024, un hombre en Washington perdió $243 millones por una llamada telefónica. No se rompió ni una línea de código. Ningún monedero falló. Todo funcionó exactamente como fue diseñado — y ese es el problema que este libro se toma en serio.", "image": "https://comparedtowhatbook.com/assets/og-es.png", "url": "https://comparedtowhatbook.com/es.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
@@ -83,7 +83,7 @@
   <div class="inner"><p class="reveal">La cripto no inventó ninguno de estos delitos. Los anotó.</p></div>
 </section>
 
-
+<section class="plates"><div class="wrap inner"><div class="eyebrow spot reveal">Del libro</div><h2 class="reveal">La evidencia, dibujada</h2><p class="intro reveal">Sin imágenes de stock, sin IA. Cada figura se redibuja desde su archivo de datos — las mismas cifras que cualquiera puede comprobar. Tres láminas del libro.</p><div class="plate-grid"><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-02-es.svg" alt="Dos barras de error: la estimación de pérdidas en cripto es estrecha y con techo, mientras que la del fraude tradicional es un piso abierto con una flecha que sale por arriba del marco." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Lámina</span><span class="pt">Techo y piso.</span> La cripto: $20,40 mil millones, un recuento casi completo. El fraude con tarjetas: $33,41 mil millones, pero solo se mide una esquina; el resto no lo cuenta nadie.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-05-es.svg" alt="Dos marcos de los mismos años, uno al lado del otro: el izquierdo está lleno de 659 marcas, una por cada robo cripto documentado; el derecho, del sistema financiero tradicional, está vacío de todo registro público." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Lámina</span><span class="pt">El marco vacío.</span> A la izquierda, 659 robos cripto documentados. A la derecha, los mismos años en las finanzas de siempre — sin registro público con que llenarlo.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-08-es.svg" alt="Una cuadrícula de 1000 celdas, cada una equivale a unos 7000 tokens; 986 están rellenas y 14 quedan en blanco: el 98,6 por ciento de los tokens acabó en un pump-and-dump o un rug pull." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Lámina</span><span class="pt">Un fraude con un mercado.</span> Un mercado, mil celdas. El 98,6% de sus tokens acabó en un pump-and-dump o un rug pull.</figcaption></figure></div></div></section>
 
 <section class="evidence">
   <div class="wrap">
@@ -95,7 +95,20 @@
   </div>
 </section>
 
-
+<section class="demo" id="try">
+  <div class="wrap inner">
+    <div class="eyebrow spot reveal">Compruébalo tú mismo</div>
+    <h2 class="reveal">Seis y cuatro</h2>
+    <p class="intro reveal">Tu billetera reconoce una dirección por sus extremos — los primeros caracteres y los últimos. Aquí tienes dos, tal como te las mostraría.</p>
+    <div class="addr-pair reveal"><div class="addr"><span class="lab">Una transferencia que acabas de hacer</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">9d2E5b1c8f0A6D4b3E7c9A1f0B2c5D8e</span>4E21</span></div><div class="addr"><span class="lab">Otra, del mismo historial</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">0c1B7a4D9e2F8c3A5b6E1d0F4a9C2b7E</span>4E21</span></div></div>
+    <p class="ask reveal">¿La misma dirección o distintas?</p>
+    <div class="choices reveal">
+      <button type="button" data-a="same">La misma</button>
+      <button type="button" data-a="diff">Distintas</button>
+    </div>
+    <p class="verdict"><span class="lead"></span>Los extremos son idénticos — <b>0x7A3F … 4E21</b> — y es todo lo que tu billetera te mostró. Los medios son completamente distintos. Un atacante cuela una dirección parecida en tu historial para que copies la equivocada y le envíes tu dinero. Es el capítulo más corto del libro, porque todo el mecanismo cabe en una frase.</p>
+  </div>
+</section>
 
 
 
@@ -180,7 +193,7 @@
     demo.querySelectorAll('.choices button').forEach(function (btn) {
       btn.addEventListener('click', function () {
         if (lead) lead.textContent =
-          btn.getAttribute('data-a') === 'same' ? "" : "";
+          btn.getAttribute('data-a') === 'same' ? "La mayoría dice que la misma. Mira:" : "Lo viste — la mayoría no. Mira:";
         demo.classList.add('done');
       });
     });

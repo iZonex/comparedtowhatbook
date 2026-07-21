@@ -200,8 +200,10 @@ h1.title .b{color:var(--spot)}
   font-size:clamp(14px,1.9vw,17px);line-height:1.75;word-break:break-all;
   background:var(--bg);border:1px solid var(--border);border-radius:3px;
   padding:22px 22px 20px;color:var(--ink);text-align:left}
+/* Метка — обычный перенос по словам: break-all на .addr нужен адресу (hex без
+   пробелов), но на метке он рвал слова посреди («СДЕЛА ЛИ», «GEM ACHT»). */
 .addr .lab{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:12px}
+  color:var(--muted);margin-bottom:12px;word-break:normal;overflow-wrap:normal}
 .addr .long{display:none}
 .addr .long .mid{color:var(--spot);background:#f2e2de;padding:0 2px;border-radius:2px}
 .demo.done .addr .short,.no-js .demo .addr .short{display:none}

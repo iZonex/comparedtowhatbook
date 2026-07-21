@@ -30,7 +30,7 @@
 <link rel="preload" href="/assets/font/charter-400-latin.woff2" as="font"
  type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/font/fonts.css">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v=d0f6fb3b">
 <script>document.documentElement.classList.remove('no-js')</script>
 </head><body>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "Compared to What?", "inLanguage": "pt-BR", "author": {"@type": "Person", "name": "Dmytro Chystiakov", "sameAs": "https://onchainattack.org"}, "description": "Em agosto de 2024, um homem em Washington perdeu US$ 243 milhões por causa de um telefonema. Nenhuma linha de código foi quebrada. Nenhuma carteira falhou. Tudo funcionou exatamente como foi projetado — e é esse o problema que este livro leva a sério.", "image": "https://comparedtowhatbook.com/assets/og-pt.png", "url": "https://comparedtowhatbook.com/pt.html", "datePublished": "2026", "bookFormat": "https://schema.org/EBook"}</script>
@@ -83,7 +83,7 @@
   <div class="inner"><p class="reveal">A cripto não inventou nenhum desses crimes. Ela os registrou.</p></div>
 </section>
 
-
+<section class="plates"><div class="wrap inner"><div class="eyebrow spot reveal">Do livro</div><h2 class="reveal">As provas, desenhadas</h2><p class="intro reveal">Sem banco de imagens, sem IA. Cada figura se redesenha a partir do seu arquivo de dados — os mesmos números que qualquer um pode conferir. Três gravuras do livro.</p><div class="plate-grid"><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-02-pt.svg" alt="Duas barras de erro: a estimativa de perdas em cripto é estreita e com teto, enquanto a do fraude tradicional é um piso aberto com uma seta que sai pelo topo do quadro." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Gravura</span><span class="pt">Teto e piso.</span> A cripto: US$ 20,40 bilhões, uma contagem quase completa. A fraude de cartão: US$ 33,41 bilhões, mas só um canto é medido; o resto ninguém conta.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-05-pt.svg" alt="Dois quadros dos mesmos anos, lado a lado: o esquerdo está cheio de 659 marcas, uma por roubo cripto documentado; o direito, do sistema financeiro tradicional, está vazio de qualquer registro público." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Gravura</span><span class="pt">O quadro vazio.</span> À esquerda, 659 roubos cripto documentados. À direita, os mesmos anos nas finanças de sempre — sem registro público para preencher.</figcaption></figure><figure class="plate reveal"><div class="frame"><img src="/assets/fig/fig-08-pt.svg" alt="Uma grade de 1000 células, cada uma vale cerca de 7000 tokens; 986 estão preenchidas e 14 ficam em branco — 98,6 por cento dos tokens terminaram em pump-and-dump ou rug pull." loading="lazy" width="780" height="430"></div><figcaption><span class="pn">Gravura</span><span class="pt">Uma fraude com um mercado.</span> Um mercado, mil células. 98,6% dos seus tokens terminaram em pump-and-dump ou rug pull.</figcaption></figure></div></div></section>
 
 <section class="evidence">
   <div class="wrap">
@@ -95,7 +95,20 @@
   </div>
 </section>
 
-
+<section class="demo" id="try">
+  <div class="wrap inner">
+    <div class="eyebrow spot reveal">Confira você mesmo</div>
+    <h2 class="reveal">Seis e quatro</h2>
+    <p class="intro reveal">Sua carteira identifica um endereço pelas pontas — os primeiros caracteres e os últimos. Aqui estão dois, exatamente como ela os mostraria.</p>
+    <div class="addr-pair reveal"><div class="addr"><span class="lab">Uma transferência que você acabou de fazer</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">9d2E5b1c8f0A6D4b3E7c9A1f0B2c5D8e</span>4E21</span></div><div class="addr"><span class="lab">Outra, do mesmo histórico</span><span class="short">0x7A3F…4E21</span><span class="long">0x7A3F<span class="mid">0c1B7a4D9e2F8c3A5b6E1d0F4a9C2b7E</span>4E21</span></div></div>
+    <p class="ask reveal">O mesmo endereço, ou diferentes?</p>
+    <div class="choices reveal">
+      <button type="button" data-a="same">O mesmo</button>
+      <button type="button" data-a="diff">Diferentes</button>
+    </div>
+    <p class="verdict"><span class="lead"></span>As pontas são idênticas — <b>0x7A3F … 4E21</b> — e é tudo o que sua carteira te mostrou. Os meios são completamente diferentes. Um golpista insere um endereço parecido no seu histórico para você copiar o errado e enviar o dinheiro a ele. É o capítulo mais curto do livro, porque o mecanismo inteiro cabe em uma frase.</p>
+  </div>
+</section>
 
 
 
@@ -180,7 +193,7 @@
     demo.querySelectorAll('.choices button').forEach(function (btn) {
       btn.addEventListener('click', function () {
         if (lead) lead.textContent =
-          btn.getAttribute('data-a') === 'same' ? "" : "";
+          btn.getAttribute('data-a') === 'same' ? "A maioria diz que é o mesmo. Olhe:" : "Você percebeu — a maioria não. Olhe:";
         demo.classList.add('done');
       });
     });
